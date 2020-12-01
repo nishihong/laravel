@@ -14,9 +14,9 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id'); //一个 integer 类型的自增长 id。
             $table->string('name');
-            $table->string('email')->unique();
+            $table->string('email')->unique(); //指定该字段的值为唯一值
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();

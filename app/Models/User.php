@@ -1,12 +1,16 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
-use Illuminate\Notifications\Notifiable;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable; //消息通知相关功能引用
+use Illuminate\Foundation\Auth\User as Authenticatable; //是授权相关功能的引用
 
 class User extends Authenticatable
 {
+
+    protected $table = 'users';
+
+
     use Notifiable;
 
     /**

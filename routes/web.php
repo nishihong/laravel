@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+//通过在路由后面链式调用 name 方法来为路由指定名称
+Route::get('/', 'StaticPagesController@home')->name('home');
+Route::get('/help', 'StaticPagesController@help')->name('help');
+Route::get('/about', 'StaticPagesController@about')->name('about');
+
+Route::get('signup', 'UsersController@create')->name('signup');
